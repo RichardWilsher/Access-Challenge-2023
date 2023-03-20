@@ -43,17 +43,17 @@ namespace tools;
             return $stmt->fetchAll();
         }
 
-        public function search($value){
-            $stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE id = \''.$value.'\' OR title LIKE \'%'.$value.'%\' OR artist LIKE \'%'.$value.'%\' OR pieceyear = \''.$value.'\' OR category = \''.$value.'\';');
-            $stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
-            $criteria = [
-                'value' => $value
-            ];
+        // public function search($value){
+        //     $stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE id = \''.$value.'\' OR title LIKE \'%'.$value.'%\' OR artist LIKE \'%'.$value.'%\' OR pieceyear = \''.$value.'\' OR category = \''.$value.'\';');
+        //     $stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
+        //     $criteria = [
+        //         'value' => $value
+        //     ];
 
-            $stmt->execute();
+        //     $stmt->execute();
 
-            return $stmt->fetchAll();
-        }
+        //     return $stmt->fetchAll();
+        // }
 
         // Function to return all records from the set Table of the set database
         function findAll(){

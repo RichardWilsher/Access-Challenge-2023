@@ -7,14 +7,14 @@ class Routes implements \tools\Routes{
         // function to create the DatabaseTable object instances and the Controller instances and return the requested controller
         require '../database.php';
         
-        // $lotTable = new \tools\DatabaseTable($pdo, 'lots', 'id');
+        $pendingTable = new \tools\DatabaseTable($pdo, 'pending', 'passcode');
         // $auctionTable = new \tools\DatabaseTable($pdo, 'auctions', 'id');
         // $adminTable = new \tools\DatabaseTable($pdo, 'admins', 'id');
 
         $controllers = [];
 
-        $controllers['access'] = new \access\Controllers\access();
-        $controllers['admin'] = new \access\Controllers\admin();
+        $controllers['access'] = new \access\Controllers\access($pendingTable);
+        $controllers['admin'] = new \access\Controllers\admin($pendingTable);
         
         return $controllers[$name];
     }

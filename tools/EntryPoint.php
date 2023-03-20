@@ -33,7 +33,7 @@ class EntryPoint {
 
             $title = $page['title'];
 
-            $navMenu = $page['navMenu'];
+            //$navMenu = $page['navMenu'];
 
             
 

@@ -11,7 +11,7 @@
 		</section>
 	</header>
 	<nav>
-		<?=$navMenu?>
+		
         </nav>
 	<main>
     	<?=$output?>
