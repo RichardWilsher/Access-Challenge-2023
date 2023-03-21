@@ -134,18 +134,36 @@ class access {
     }
 
     public function portal(){
+        //var_dump($_SESSION);
+        $email = $_SESSION['email'];
+        $patient = $this->patientTable->find('email', $email)[0];
+        $nhsnumber = $patient->nhsnumber;
+        $referals = $this->referalsTable->findall('nhsnumber',$nhsnumber);
         return ['template' => 'portal.html.php',
         'css' => 'styles2.css',
         'title' => 'Portal',
         'navMenu' => '',
         'variables' => [
-            
+            'patient' => $patient,
+            'referals' => $referals
             ]
         ];
     }
 
     public function loginSubmit(){
+        $_SESSION['email'] = $_POST['email'];
         header('location: /access/portal');
+    }
+
+    public function request(){
+        return ['template' => 'request.html.php',
+        'css' => 'styles2.css',
+        'title' => 'Portal',
+        'navMenu' => '',
+        'variables' => [
+
+            ]
+        ];
     }
 }
 ?>
