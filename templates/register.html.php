@@ -26,7 +26,7 @@
 
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="password2">Confirm Password</label>
-									<input id="password2" type="passwordt" class="form-control" name="password2" value="" required>
+									<input id="password2" type="password" class="form-control" name="password2" value="" required>
 									<div class="invalid-feedback">
 										password is required
 									</div>

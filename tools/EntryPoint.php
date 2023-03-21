@@ -28,6 +28,8 @@ class EntryPoint {
             $controller = $this->routes->getController($controllerName);
             
             $page = $controller->$functionName();
+
+            $css = $page['css'];
     
             $output = $this->loadTemplate('../templates/' . $page['template'], $page['variables']);
 

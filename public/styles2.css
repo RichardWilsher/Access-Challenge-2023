@@ -1,0 +1,164 @@
+		/* Navigation bar styles */
+		nav {
+			background-color: #F5F5F5;
+
+			overflow: hidden;
+		}
+    body{
+      height: 100%; 
+    }
+
+		nav a {
+      font-size: 1.2em;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+        /* Set a max width for the content */
+
+  
+  /* Add a background color and padding to the sections */
+  section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+  }
+  
+  /* Style the section headings */
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Style the patient and referral information */
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Add a border around the sections */
+  section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Add some spacing between the sections */
+  section + section {
+    margin-top: 20px;
+  }
+  
+
+        nav img {
+			height: 50px;
+			padding: 5px;
+            float: left;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.active {
+			background-color: #0072C6;
+			color: white;
+      padding: 14px 16px;
+		}
+    .right,.active{
+       float: right;
+    }
+
+
+/* request page css*/
+        .change-main {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: sans-serif;
+        }
+        
+      
+      
+      .this-section{
+          
+          padding: 20px;
+          margin-bottom: 20px;
+          max-width: 800px;
+          margin: 0 auto;
+          
+        }
+        /* Style the select box */
+        select {
+          font-size: 16px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f5f5f5;
+          width: 100%;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+        
+        /* Style the input text field */
+        input[type="text"] {
+          font-size: 16px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f5f5f5;
+          width: 100%;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+        
+        /* Style the button */
+       .request{
+          background-color: #0072C6;
+          text-align: center;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        
+        /* Add some spacing between the button and the text field */
+        button + input[type="text"] {
+          margin-top: 10px;
+        }
+        textarea {
+          font-size: 16px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f5f5f5;
+          width: 100%;
+          height: 100px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+        .content {
+          min-height: calc(100% - 20px); 
+          padding-bottom: 50px; 
+          box-sizing: border-box;
+        }
+
+        footer {
+          background-color:  #f5f5f5;
+          color: black;
+          padding: 20px;
+          text-align: center;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 20px;
+        }

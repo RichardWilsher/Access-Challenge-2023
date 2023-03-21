@@ -8,13 +8,13 @@ class Routes implements \tools\Routes{
         require '../database.php';
         
         $pendingTable = new \tools\DatabaseTable($pdo, 'pending', 'passcode');
-        // $auctionTable = new \tools\DatabaseTable($pdo, 'auctions', 'id');
-        // $adminTable = new \tools\DatabaseTable($pdo, 'admins', 'id');
+        $patientTable = new \tools\DatabaseTable($pdo, 'patients', 'nhsnumber');
+        $referalsTable = new \tools\DatabaseTable($pdo, 'referals', 'id');
 
         $controllers = [];
 
-        $controllers['access'] = new \access\Controllers\access($pendingTable);
-        $controllers['admin'] = new \access\Controllers\admin($pendingTable);
+        $controllers['access'] = new \access\Controllers\access($pendingTable, $patientTable, $referalsTable);
+        $controllers['admin'] = new \access\Controllers\admin($pendingTable, $patientTable, $referalsTable);
         
         return $controllers[$name];
     }

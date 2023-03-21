@@ -3,13 +3,18 @@ namespace access\Controllers;
 class admin {
 
     private $pendingTable;
+    private $patientTable;
+    private $referalsTable;
 
-    public function __construct($pendingTable){
+    public function __construct($pendingTable, $patientTable, $referalsTable){
         $this->pendingTable = $pendingTable;
+        $this->patientTable = $patientTable;
+        $this->referalsTable = $referalsTable;
     }
 
     public function login(){
         return ['template' => 'adminlogin.html.php',
+        'css' => 'styles.css',
         'title' => 'Login',
         'navElement' => '',
         'variables' => [
@@ -24,6 +29,7 @@ class admin {
 
     public function requestauthorisation(){
         return ['template' => 'requestauthorisation.html.php',
+        'css' => 'styles.css',
         'title' => 'Request Authorisation',
         'navElement' => '',
         'variables' => [
@@ -41,6 +47,7 @@ class admin {
 
     public function forgot(){
         return ['template' => 'adminforgot.html.php',
+        'css' => 'styles.css',
         'title' => 'Request Authorisation',
         'navElement' => '',
         'variables' => [

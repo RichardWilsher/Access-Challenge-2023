@@ -24,7 +24,7 @@
         echo '</form>';
 
         if (isset($_SESSION['error'])){
-            echo 'Error ' . $_SESSION['error'];
+            echo $_SESSION['error'];
             unset($_SESSION['error']);
         }
     } else {
@@ -48,9 +48,8 @@
         echo '<input type="hidden" name="passcode" value="';
         echo '</form>';
 
-        unset($_SESSION['passcode']);
         if (isset($_SESSION['error'])){
-            echo 'Error ' . $_SESSION['error'];
+            echo $_SESSION['error'];
             unset($_SESSION['error']);
         }
     }
