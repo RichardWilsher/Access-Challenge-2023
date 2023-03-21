@@ -67,5 +67,33 @@ class access {
         }
         
     }
+
+    public function register(){
+        return ['template' => 'register.html.php',
+        'title' => 'Register',
+        'navMenu' => '',
+        'variables' => [
+            
+            ]
+        ];
+    }
+
+    public function registerSubmit(){
+        header('location: /access/login');
+    }
+
+    public function forgot(){
+        return ['template' => 'forgot.html.php',
+        'title' => 'Forgot Password',
+        'navMenu' => '',
+        'variables' => [
+            
+            ]
+        ];
+    }
+
+    public function loginSubmit(){
+        header('location: /access/patient');
+    }
 }
 ?>
