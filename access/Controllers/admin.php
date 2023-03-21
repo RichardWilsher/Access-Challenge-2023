@@ -18,6 +18,10 @@ class admin {
             ];
     }
 
+    public function loginSubmit(){
+        header('location: /admin/login');
+    }
+
     public function requestauthorisation(){
         return ['template' => 'requestauthorisation.html.php',
         'title' => 'Request Authorisation',
@@ -33,6 +37,16 @@ class admin {
         $message = $_POST;
         $this->pendingTable->insert($message);
         header('location: /admin/login');
+    }
+
+    public function forgot(){
+        return ['template' => 'adminforgot.html.php',
+        'title' => 'Request Authorisation',
+        'navElement' => '',
+        'variables' => [
+
+        ]
+            ];
     }
 
     

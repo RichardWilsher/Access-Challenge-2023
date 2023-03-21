@@ -21,7 +21,7 @@ class Routes implements \tools\Routes{
     
     public function getDefaultRoute() {
         // function to return the default route if no route is supplied
-        return 'access/home';
+        return 'access/passcode';
     }
 
     public function checkLogin($route) {
