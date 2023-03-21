@@ -24,7 +24,7 @@ class admin {
     }
 
     public function loginSubmit(){
-        header('location: /admin/login');
+        header('location: /admin/dashboard');
     }
 
     public function requestauthorisation(){
@@ -48,7 +48,40 @@ class admin {
     public function forgot(){
         return ['template' => 'adminforgot.html.php',
         'css' => 'styles.css',
-        'title' => 'Request Authorisation',
+        'title' => 'Forgot Password',
+        'navElement' => '',
+        'variables' => [
+
+        ]
+            ];
+    }
+
+    public function dashboard(){
+        //var_dump($_SESSION);
+        $patients = [];
+        if (isset($_POST['patient'])){
+            $search = $_POST['patient'];
+            $patients = $this->patientTable->findall('nhsnumber', $search);
+        } 
+        return ['template' => 'dashboard.html.php',
+        'css' => 'styles.css',
+        'title' => 'Dashboard',
+        'navElement' => '',
+        'variables' => [
+            'patients' => $patients
+        ]
+            ];
+    }
+
+    public function dashboardSubmit(){
+        $_SESSION['patient'] = $_POST['search-input'];
+        header('location: /admin/dashboard');
+    }
+
+    public function request(){
+        return ['template' => 'changerequests.html.php',
+        'css' => 'styles.css',
+        'title' => 'Change of Detail Requests',
         'navElement' => '',
         'variables' => [
 

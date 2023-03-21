@@ -1,0 +1,29 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0072c6;
+
+}
+
+.panel-primary>.panel-heading {
+    background-color: #0072c6;
+    color: #fff;
+}
+
+.panel-default>.panel-heading {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: #0072c6;
+
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #f1f1f1;
+}
