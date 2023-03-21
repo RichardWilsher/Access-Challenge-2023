@@ -138,7 +138,7 @@ class access {
         $email = $_SESSION['email'];
         $patient = $this->patientTable->find('email', $email)[0];
         $nhsnumber = $patient->nhsnumber;
-        $referals = $this->referalsTable->findall('nhsnumber',$nhsnumber);
+        $referals = $this->referalsTable->find('nhsnumber',$nhsnumber);
         return ['template' => 'portal.html.php',
         'css' => 'styles2.css',
         'title' => 'Portal',
